@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="p5/p5.js"></script>
+    <script src="ui-master/dist/NexusUI.js"></script>
+    <script src="p5/addons/p5.dom.js"></script>
+    <script src="p5/addons/p5.sound.js"></script>
+    <script src="source.js"></script>
+
+    <title>Ex3</title>
+</head>
+<body>
+    
+    <div id="dial"></div>
+    <div id="piano"></div>
+    
+    <script>
+        var dial = new Nexus.Dial("dial");
+        dial.on("change", function(v){
+            console.log(v);
+        });
+        var piano = new Nexus.Piano("piano", {
+            "size": [500, 125],
+            "mode": "button", 
+            "lowNote":24,
+            "highNote": 60
+        });
+
+    </script>
+
+</body>
+</html>
